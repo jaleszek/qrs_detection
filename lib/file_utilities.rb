@@ -9,7 +9,7 @@ module FileUtilities
 		begin
 			file = File.open(filename)
 			file_content = []
-			file.each {|line| file_content << line} 
+			file.each {|line| file_content << line}
 			file_content.map{ |line| split_and_get_value(line) }
 		rescue
 			p "Something went wrong"

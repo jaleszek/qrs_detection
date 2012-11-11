@@ -32,18 +32,18 @@ module EcgDataReader
 		file = File.new(file_path, "r")
 		out = []
 		while (line = file.gets)
-      out << line
-    end
-    out
+			out << line
+		end
+		out
 	end
 
 	def change_format(formated_number)
-	  s_formated_number = formated_number.split("e")
-	  if s_formated_number.length.eql?(2)
+		s_formated_number = formated_number.split("e")
+		if s_formated_number.length.eql?(2)
 			s_formated_number[0].to_f*(10**s_formated_number[1].to_i)
 		else
 			s_formated_number.first.to_f
-	  end
+		end
 	end
 
 	def get_ascii_array(file_path = "out_data.txt")

@@ -1,6 +1,6 @@
 module DetectionPoints
 
-	def potential_detection_points(detection_function, signal_treshold, window_size) 
+	def potential_detection_points(detection_function, signal_treshold, window_size)
 		window_shift, local_maximum, index_of_window, eye_closing, detection_function_length = 0, 0, 0, 32, detection_function.length
 		potential_detection_points, potential_detection_points_index = [], 0
 

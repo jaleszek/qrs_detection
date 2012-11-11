@@ -19,7 +19,7 @@ class QRSDetection
 
 		save_each_line("input_ecg_signal.txt", ecg)
 
-		# filtr dolno przepustowy: y(nT) = 2y(nT – T) – y(nT – 2T) + x(nT) – 2x(nT – 6T) + x(nT – 12T) 
+		# filtr dolno przepustowy: y(nT) = 2y(nT – T) – y(nT – 2T) + x(nT) – 2x(nT – 6T) + x(nT – 12T)
 		fdp_filtered_signal = infinite_impulse_response(ecg, coefficients_of_low_pass_filter)
 
 		save_each_line("after_fdp_signal.txt", fdp_filtered_signal)
